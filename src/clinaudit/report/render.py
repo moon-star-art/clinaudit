@@ -168,8 +168,8 @@ _TEMPLATE = """<!DOCTYPE html>
   h2 { font-size:16px; margin-top:34px; color:var(--accent);
        border-left:4px solid var(--accent); padding-left:10px; }
   .meta { color:var(--muted); font-size:12px; margin-bottom:20px; }
-  .kpis { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; }
-  .kpi { flex:1 1 140px; background:#fff; border:1px solid var(--line);
+  .kpis { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; align-items:stretch; }
+  .kpi { flex:0 1 140px; min-width:120px; background:#fff; border:1px solid var(--line);
          border-radius:8px; padding:12px 14px; }
   .kpi .v { font-size:20px; font-weight:700; color:var(--accent); }
   .kpi .l { font-size:12px; color:var(--muted); }
