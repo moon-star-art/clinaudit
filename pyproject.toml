@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinaudit"
+version = "0.1.0"
+description = "临床预测模型可信度审计工具 / A toolkit for auditing the trustworthiness of clinical prediction models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "moon-star-art" }]
+keywords = ["clinical-prediction", "calibration", "fairness", "decision-curve", "conformal"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.1"]
+
+[project.scripts]
+clinaudit = "clinaudit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+clinaudit = ["report/templates/*.html", "resources/*.csv"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

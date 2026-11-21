@@ -1,0 +1,22 @@
+# 忽略规则
+
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+_build/
+*.log
+*.log.err
+data_cache/
+.vscode/
+.idea/
+.DS_Store
+mplcache/
